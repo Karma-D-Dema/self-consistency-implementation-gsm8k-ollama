@@ -161,33 +161,6 @@ python evaluate_gsm8k_ollama.py --temperature 0.7
 python evaluate_gsm8k_ollama.py --temperature 0.9
 ```
 
----
-
-## 📊 Expected Performance
-
-### Llama 3.1 8B + Self-Consistency
-
-| Setup | Expected GSM8K Accuracy |
-|-------|------------------------|
-| Greedy decoding | ~45-55% |
-| Self-Consistency (10 samples) | ~55-65% |
-| Self-Consistency (40 samples) | ~60-70% |
-| Self-Consistency (80 samples) | ~65-72% |
-
-**Note:** Lower than GPT-4 (90%+) but 100% FREE!
-
-### Comparison with Paper Models
-
-| Model | GSM8K Accuracy | Cost |
-|-------|---------------|------|
-| **Paper's PaLM-540B + SC** | 74.4% | Not available |
-| **Paper's GPT-3 + SC** | 78.0% | Deprecated |
-| **GPT-4 + SC** | ~92% | $1,320 (full eval) |
-| **GPT-3.5 + SC** | ~75% | $30 (full eval) |
-| **Llama 3.1 8B + SC** | ~65-70% | **$0 (FREE)** ✅ |
-
----
-
 ## 💻 System Requirements
 
 ### Minimum (for Llama 3.1 8B):
