@@ -86,7 +86,7 @@ All tests passed! You're ready to go!
 
 Now you can:
 - Run **unlimited** evaluations
-- **Zero** API costs
+- **Zero** API s
 - **No** rate limits
 - **Complete** privacy (runs locally)
 
@@ -106,24 +106,17 @@ This runs a simple apple problem with 10 samples.
 python evaluate_gsm8k_ollama.py --max-questions 5 --samples 10
 ```
 
-**Time:** ~5-10 minutes  
-**Cost:** $0
 
 ### Example 3: GSM8K (100 questions)
 ```powershell
 python evaluate_gsm8k_ollama.py --max-questions 100 --samples 40
 ```
 
-**Time:** ~2-3 hours  
-**Cost:** $0
 
 ### Example 4: Full GSM8K (1,319 questions)
 ```powershell
 python evaluate_gsm8k_ollama.py --samples 40
 ```
-
-**Time:** ~24-30 hours (run overnight)  
-**Cost:** $0
 
 ---
 
@@ -202,18 +195,6 @@ python evaluate_gsm8k_ollama.py --temperature 0.9
 - **Disk:** 10GB free
 - **OS:** Windows 10/11, Mac, Linux
 
-### Recommended:
-- **RAM:** 16GB
-- **Disk:** 20GB free
-- **CPU:** Modern multi-core processor
-
-### For Larger Models (70B):
-- **RAM:** 40GB+
-- **Disk:** 50GB free
-- Or use quantized versions (4-bit)
-
----
-
 ## 🐛 Troubleshooting
 
 ### Issue: "ollama: command not found"
@@ -243,29 +224,9 @@ python evaluate_gsm8k_ollama.py --temperature 0.9
 1. Use fewer samples: `--samples 10`
 2. Use smaller model: `mistral:7b` or `phi3:mini`
 3. Test on fewer questions: `--max-questions 50`
-4. Be patient - it's free! ☕
+
 
 ---
-
-## 📈 Speed Estimates
-
-On a typical laptop (16GB RAM, i7 CPU):
-
-| Task | Time |
-|------|------|
-| 1 question, 10 samples | ~2-3 minutes |
-| 1 question, 40 samples | ~8-12 minutes |
-| 5 questions, 10 samples | ~10-15 minutes |
-| 100 questions, 40 samples | ~2-3 hours |
-| Full GSM8K (1,319 q), 40 samples | ~24-30 hours |
-
-**Tip:** Run large evaluations overnight!
-
----
-
-## 🎓 For Your Thesis
-
-### What to Report
 
 **Model Setup:**
 ```
@@ -274,20 +235,7 @@ applying the self-consistency method with 40 samples per question
 at temperature 0.7, following Wang et al. (2023)."
 ```
 
-**Why This is Valid:**
-- ✅ Tests the same algorithm (self-consistency)
-- ✅ Uses open-source model (reproducible)
-- ✅ No cost barrier (others can replicate)
-- ✅ Shows method works on different models
 
-**What to Compare:**
-- Your results with Llama 3.1 + Self-Consistency
-- Baseline (greedy decoding with Llama 3.1)
-- Paper's results with GPT-3/PaLM (for reference)
-
----
-
-## 🚀 Advanced Tips
 
 ### Run Multiple Models
 ```powershell
@@ -301,41 +249,6 @@ python evaluate_gsm8k_ollama.py --model llama3.1:8b --max-questions 100 --output
 python evaluate_gsm8k_ollama.py --model deepseek-r1:7b --max-questions 100 --output deepseek_results.json
 python evaluate_gsm8k_ollama.py --model mistral:7b --max-questions 100 --output mistral_results.json
 ```
-
-### Speed Up Evaluation
-```python
-# Edit self_consistency_ollama.py
-# Use parallel requests (if you have good CPU)
-from concurrent.futures import ThreadPoolExecutor
-
-# In sample_reasoning_paths method:
-with ThreadPoolExecutor(max_workers=4) as executor:
-    # Submit all requests at once
-    ...
-```
-
-### Save Memory
-```powershell
-# Unload model when not in use
-ollama stop llama3.1:8b
-
-# Or use smaller quantized version
-ollama pull llama3.1:8b-q4  # 4-bit quantization
-```
-
----
-
-## ✅ Checklist
-
-Before running full evaluation:
-
-- [ ] Ollama installed and running
-- [ ] Llama 3.1 8B downloaded
-- [ ] `test_ollama.py` passes all tests
-- [ ] Tested on 5 questions successfully
-- [ ] Have 10GB+ free disk space
-- [ ] Have 3-4 hours for small eval (or overnight for full)
-
 ---
 
 ## 🆘 Getting Help
