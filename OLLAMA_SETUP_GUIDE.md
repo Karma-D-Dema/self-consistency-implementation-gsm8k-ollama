@@ -59,7 +59,7 @@ You should get: "The answer is 8" or similar.
 ### Step 4: Install Python Requirements 
 
 ```powershell
-pip install requests datasets
+pip install -r .\requirements_ollama.txt       
 ```
 
 ---
