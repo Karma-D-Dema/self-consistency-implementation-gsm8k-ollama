@@ -1,9 +1,5 @@
 # 🦙 Using Llama 3.1 with Ollama - Complete Guide
 
-**100% FREE, NO API COSTS, NO RATE LIMITS!**
-
----
-
 ## 🚀 Quick Setup (10 Minutes)
 
 ### Step 1: Install Ollama (2 minutes)
