@@ -1,8 +1,8 @@
 # 🦙 Using Llama 3.1 with Ollama - Complete Guide
 
-## 🚀 Quick Setup (10 Minutes)
+## 🚀 Quick Setup 
 
-### Step 1: Install Ollama (2 minutes)
+### Step 1: Install Ollama 
 
 **Windows:**
 1. Go to: https://ollama.ai/download
@@ -19,7 +19,7 @@ You should see: `ollama version is 0.x.x`
 
 ---
 
-### Step 2: Download Llama 3.1 8B (5 minutes)
+### Step 2: Download Llama 3.1 8B 
 
 ```powershell
 ollama pull llama3.1:8b
@@ -44,7 +44,7 @@ You should see `llama3.1:8b` in the list.
 
 ---
 
-### Step 3: Test It Works (1 minute)
+### Step 3: Test It Works
 
 ```powershell
 ollama run llama3.1:8b "What is 5 + 3?"
@@ -56,7 +56,7 @@ You should get: "The answer is 8" or similar.
 
 ---
 
-### Step 4: Install Python Requirements (1 minute)
+### Step 4: Install Python Requirements 
 
 ```powershell
 pip install requests datasets
@@ -64,7 +64,7 @@ pip install requests datasets
 
 ---
 
-### Step 5: Test Self-Consistency (2 minutes)
+### Step 5: Test Self-Consistency 
 
 ```powershell
 python test_ollama.py
@@ -361,13 +361,9 @@ python test_ollama.py
 python evaluate_gsm8k_ollama.py --max-questions 5 --samples 10
 ```
 
-**For thesis:**
+**For All
 ```powershell
 python evaluate_gsm8k_ollama.py --samples 40
 ```
 
-**Cost: $0.00 forever! 🎉**
 
----
-
-**Questions?** Just ask! I'm here to help. 🚀
